@@ -2,7 +2,7 @@
   "name": "v1-synilausn",
   "version": "1.0.0",
   "description": "v10",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "eslint": "eslint *.js **/*.js"
   },
