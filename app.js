@@ -19,15 +19,17 @@ app.get('/', (req, res) => {
  
  
  function notFoundHandler(req, res, next) { /* eslint-disable-line */
-  const title = 'Fannst ekki';
-  const message = 'Ó nei, efnið finnst ekki!';
-  res.status(404).render('error', { title, message });
+  const type = '404 Error'
+  const title = 'Síðan fannst ekki.';
+  const message = 'Efnið sem þú ert að leita að finnst ekki.';
+  res.status(404).render('error', { title, type, message });
 }
 
 function errorHandler(err, req, res, next) { /* eslint-disable-line */
-  const title = 'Villa kom upp';
-  const message = '';
-  res.status(500).render('error', { title, message })
+  const type = '500 Error'
+  const title = 'Innri netþjóna villa';
+  const message = 'Netþjóninn klúðraði eitthverju. Sorry';
+  res.status(500).render('error', { title, type, message })
 }
 
 

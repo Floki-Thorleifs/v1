@@ -1,10 +1,16 @@
 <%- include('header') -%>
 
-<header class="heading heading--main">
-    <span class="heading__category">AHHHHHHHH</span>
-    <h1 class="heading__title">VILLLAAA!!!</h1>
+<header class="error_heading error_heading--main">
+    <span class="error_heading__category"><%= type %></span>
+    <h1 class="error_heading__title"><%= title %></h1>
   </header>
   <main>
+    <div class ="error_heading__message">
+      <%= message %>
+    </div>
+    <footer class="lecture__footer">
+        <a class="lecture__back" href="/">Til baka</a>
+    </footer>
   </main>
 
 <%- include('footer') -%>

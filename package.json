@@ -4,7 +4,8 @@
   "description": "v10",
   "main": "app.js",
   "scripts": {
-    "eslint": "eslint *.js **/*.js"
+    "eslint": "eslint *.js **/*.js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jsdom": "^13.1.0"
   }
 }
