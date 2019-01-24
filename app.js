@@ -16,7 +16,8 @@ app.get('/', (req, res) => {
   res.render('index', { title: 'Forsíða' });
 });
 
-function notFoundHandler(res) {
+// eslint-disable-next-line no-unused-vars
+function notFoundHandler(req, res, next) {
   /* eslint-disable-line */
   const type = '404 Error';
   const title = 'Síðan fannst ekki.';
@@ -24,7 +25,8 @@ function notFoundHandler(res) {
   res.status(404).render('error', { title, type, message });
 }
 
-function errorHandler(res) {
+// eslint-disable-next-line no-unused-vars
+function errorHandler(err, res, req, next) {
   /* eslint-disable-line */
   const type = '500 Error';
   const title = 'Innri netþjóna villa';
