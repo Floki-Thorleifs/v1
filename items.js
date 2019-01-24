@@ -1,13 +1,15 @@
 const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;
-const { document } = (new JSDOM()).window;
+const { document } = new JSDOM().window;
 
 function el(name, ...children) {
   const element = document.createElement(name);
 
   if (Array.isArray(children)) {
-    for (let child of children) { /* eslint-disable-line */
+    // eslint-disable-next-line no-restricted-syntax
+    for (const child of children) {
+      /* eslint-disable-line */
       if (typeof child === 'string') {
         element.appendChild(document.createTextNode(child));
       } else if (child) {
